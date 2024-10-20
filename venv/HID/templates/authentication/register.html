@@ -1,0 +1,32 @@
+{% extends "base_generic.html" %}
+{% block content %}
+  <h2>Register</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="id_first_name">First Name:</label>
+        <input type="text" name="first_name" id="id_first_name" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="id_last_name">Last Name:</label>
+        <input type="text" name="last_name" id="id_last_name" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="id_aadhar_number">Aadhar Number:</label>
+        <input type="text" name="aadhar_number" id="id_aadhar_number" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="id_phone_number">Phone Number:</label>
+        <input type="text" name="phone_number" id="id_phone_number" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="id_hid">HID:</label>
+        <input type="text" name="hid" id="id_hid" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="id_pin">PIN:</label>
+        <input type="text" name="pin" id="id_pin" class="form-control" required>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+{% endblock %}

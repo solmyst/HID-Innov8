@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HID Number Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="WhatsApp_Image_2024-10-17_at_18.48.58_bdf75c58__1_-removebg.png" alt="Health Identity Logo">
+                <span style="color: #FFFFFF;">Health <strong>Identity</strong></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Resource Centre</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <section class="page active" id="home">
+            <div class="intro">
+                <h1>Create Health Identification - HID Number</h1>
+                <p>Creating India's Digital Health Mission</p>
+                <p>HID - Health Identification Account - Key to your digital healthcare journey.</p>
+                <button class="primary-button" onclick="showPage('createHID')">Create HID Number</button>
+                <p>Already have HID number? <a href="#" onclick="showPage('login')">Login</a></p>
+            </div>
+          <section class="benefits">
+                <h2>Benefits of HID Number</h2>
+                <p class="small-text">
+                    HID for every citizen, which will securely store all of their medical records in a unified digital platform.
+                </p>
+                <div class="benefit-cards">
+                    <div class="card">
+                        <h3>Unique & Trustable Identity</h3>
+                        <p>Establish unique identity across different healthcare providers within the healthcare ecosystem.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Unified Benefits</h3>
+                        <p>Link all healthcare benefits ranging from public health programmes to insurance schemes.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Hassle-free Access</h3>
+                        <p>Avoid long lines for registration in healthcare facilities across the country.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Easy PHR Sign Up</h3>
+                        <p>Seamless sign up for PHR (Personal Health Records) applications such as ABDM.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq">
+                <h2>FAQ's</h2>
+                <p>Everything you need to know about the HID number. Can't find the answers you are looking for?</p>
+                <button class="contact-button">Contact Us</button>
+                <div class="faq-container">
+                    <div class="faq-questions">
+                        <div class="faq-item">What is HID Number?</div>
+                        <div class="faq-item">What is HID Address?</div>
+                        <div class="faq-item">Linking HID Number with HID Address</div>
+                    </div>
+                </div>
+                <a href="#" class="know-more-link">Know More ➔</a>
+            </section>
+        </section>
+
+        <!-- Create HID Page -->
+        <!-- Create HID Page -->
+<section class="page" id="createHID">
+    <div class="signup-container">
+        <div class="signup-form">
+            <h2>Sign Up</h2>
+            <form>
+                <div class="form-control">
+                    <input type="text" id="phone" placeholder="Phone Number" maxlength="10" required>
+                </div>
+                <div class="form-control">
+                    <input type="text" id="aadhaar" placeholder="Aadhaar Card Number" maxlength="12" required>
+                </div>
+                <div class="form-control">
+                    <input type="password" id="pin" placeholder="Security Pin" maxlength="4" required>
+                </div>
+                <p class="info-text">*Please ensure that mobile number is linked with Aadhaar as it will be required for OTP authentication.</p>
+                <div class="form-control">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I agree with <a href="#">Terms & Conditions</a></label>
+                </div>
+                <div class="form-control">
+                    <button a href="#" onclick="showPage('home')" class="btn">GENERATE HID</button>
+                </div>
+                <div class="login-link">
+                    <p>Already have an account? <a href="#" onclick="showPage('login')">Log in</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="illustration">
+            <img src="signupimg.png" alt="Doctor illustration">
+        </div>
+    </div>
+</section>
+
+
+        <!-- Login Page -->
+        <section class="page" id="login">
+            <div class="container">
+                <div class="login-option">
+                    <h2>Log in as a registered user</h2>
+                    <button onclick="showPage('loginSuccess')">Login as User</button>
+                    <p>No HID number? <a href="#" onclick="showPage('createHID')">Create HID</a></p>
+                </div>
+                <div class="login-option">
+                    <h2>Authenticate as a doctor or facility</h2>
+                    <button onclick="showPage('facilityLogin')">Login as Facility</button>
+                   
+                </div>
+            </div>
+        </section>
+<!-- Health Records Page -->
+<section class="page" id="healthRecords">
+    <div class="records-container">
+        <h2>Health Records</h2>
+        <div class="search-filter">
+            <input type="text" placeholder="Search" class="search-bar">
+            <button class="filter-button">Filter</button>
+        </div>
+        <table class="health-table">
+            <thead>
+                <tr>
+                    <th>Record ID</th>
+                    <th>Health Identity</th>
+                    <th>Date</th>
+                    <th>Hospital-Doctor</th>
+                    <th>Prescription</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>174583637384</td>
+                    <td>Nov-12-2024</td>
+                    <td>City Hospital - Dr. Williams</td>
+                    <td><button class="download-btn">⬇</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>174583637384</td>
+                    <td>Nov-15-2024</td>
+                    <td>City Hospital - Dr. Williams</td>
+                    <td><button class="download-btn">⬇</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>174583637384</td>
+                    <td>Nov-20-2024</td>
+                    <td>City Hospital - Dr. Williams</td>
+                    <td><button class="download-btn">⬇</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>174583637384</td>
+                    <td>Nov-30-2024</td>
+                    <td>City Hospital - Dr. Williams</td>
+                    <td><button class="download-btn">⬇</button></td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button>1</button>
+            <button>2</button>
+            <!-- Add more pagination as needed -->
+        </div>
+    </div>
+</section>
+      <!-- Health Records Page -->
+<section class="page" id="clientRecordsPage">
+    <div class="records-container">
+        <h2>Client list</h2>
+    
+        </div>
+
+        <!-- Search bar and table -->
+        <div class="search-filter">
+            <input type="text" placeholder="Search" class="search-bar">
+        </div>
+        <table class="health-table">
+            <thead>
+                <tr>
+                    <th>Record_ID</th>
+                    <th>Health Identity</th>
+                    <th>Date</th>
+                    <th>Hospital-Doctor</th>
+                    <th>Prescription</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>174583637384</td>
+                    <td>Nov-12-2024</td>
+                    <td>City Hospital - Dr. Williams</td>
+                    <td><button class="download-btn">⬇</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>236583637384</td>
+                    <td>Nov-12-2024</td>
+                    <td>Polo Hospital - Dr. Aaryan</td>
+                    <td><button class="download-btn">⬇</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>209383637384</td>
+                    <td>Nov-12-2024</td>
+                    <td>City Hospital - Dr. Prajjwal</td>
+                    <td><button class="download-btn">⬇</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>1744839637384</td>
+                    <td>Nov-12-2024</td>
+                    <td>City Hospital - Dr. Abhinav</td>
+                    <td><button class="download-btn">⬇</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button>1</button>
+            <button>2</button>
+            <!-- Additional pagination as needed -->
+        </div>
+    </div>
+</section>
+
+
+        <!-- Facility Login Page -->
+        <section class="page" id="facilityLogin">
+            <div class="login-container">
+                <header class="header">
+                    <div class="logo">
+                        <img src="logo.png" alt="">
+                        <span>Health <strong>Identity</strong></span>
+                    </div>
+                </header>
+
+                <main class="login-main">
+                    <h1>Facility Login</h1>
+                    <p>Enter your details to authenticate your facility account.</p>
+
+                    <form class="login-form">
+                        <label for="facilityId">Facility ID</label>
+                        <input type="text" id="facilityId" placeholder="e.g. 123456789" maxlength="10">
+                        
+                        <label for="facilityPin">Enter PIN</label>
+                        <input type="password" id="facilityPin" placeholder="Enter your four-pin" maxlength="4">
+                        
+                        <a href="#" class="forgot-pin">Forgot PIN?</a>
+                        
+                        <button  a href="#" onclick="showPage('clientRecordsPage')"class="primary-button">Continue</button>
+                    </form>
+                </main>
+            </div>
+        </section>
+
+        <!-- Login Success Page -->
+        <section class="page" id="loginSuccess">
+            <div class="login-container">
+                <header class="header">
+                    <div class="logo">
+                        <img src="logo.png" alt="">
+                        <span>Health <strong>Identity</strong></span>
+                    </div>
+                </header>
+
+                <main class="login-main">
+                    <h1>Welcome!</h1>
+                    <p>Enter your details to sign in to your account.</p>
+
+                    <form class="login-form">
+                        <label for="hid">HID</label>
+                        <input type="text" id="hid" placeholder="e.g. 128238429347" maxlength="10">
+                        
+                        <label for="pin">Enter PIN</label>
+                        <input type="password" id="pin" placeholder="Enter your four-pin" maxlength="4">
+                        
+                        <a href="#" class="forgot-pin">Forgot PIN?</a>
+                        
+                       <button href="#" onclick="showPage('healthRecords')" class="primary-button">Continue</button>
+                    </form>
+                </main>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
